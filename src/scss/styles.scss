@@ -1,0 +1,36 @@
+@use "@carbon/react" with (
+  $prefix: "kds",
+  $font-path: "@ibm/plex",
+  $use-per-family-plex: "true"
+);
+@use "@carbon/react/scss/theme";
+@use "@carbon/react/scss/themes";
+@use "@carbon/react/scss/colors";
+@use "@carbon/react/scss/spacing";
+@use "@carbon/react/scss/breakpoint";
+@use "@carbon/react/scss/motion";
+@use "@carbon/react/scss/utilities/convert";
+@use "@carbon/react/scss/utilities/z-index";
+@use "@carbon/react/scss/utilities/focus-outline";
+@use "@carbon/react/scss/utilities/rotate";
+@use "@carbon/react/scss/utilities/skeleton";
+
+:root[data-carbon-theme="white"] {
+  @include theme.theme(themes.$white);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-carbon-theme]) {
+    @include theme.theme(themes.$white);
+  }
+}
+
+:root[data-carbon-theme="g100"] {
+  @include theme.theme(themes.$g100);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-carbon-theme]) {
+    @include theme.theme(themes.$g100);
+  }
+}

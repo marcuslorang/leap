@@ -15,6 +15,7 @@
     "*.{js,jsx,ts,tsx,astro,scss,md,json}": "prettier --write"
   },
   "dependencies": {
+    "@carbon/react": "^1.82.1",
     "astro": "^5.7.12"
   },
   "devDependencies": {
